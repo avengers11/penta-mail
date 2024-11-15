@@ -16,10 +16,6 @@ class NotInstalled
      */
     public function handle($request, Closure $next)
     {
-        if (!isInitiated()) {
-            return redirect()->action('InstallController@starting');
-        }
-
         return $next($request);
     }
 }

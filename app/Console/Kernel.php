@@ -34,10 +34,6 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        if (!isInitiated()) {
-            return;
-        }
-
         // Make sure CLI process is NOT executed as root
         Notification::recordIfFails(function () {
             if (!exec_enabled()) {
