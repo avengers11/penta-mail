@@ -480,7 +480,7 @@ function format_price($price, $format = '{PRICE}', $html = false)
  */
 function isInitiated()
 {
-    return file_exists(storage_path('app/installed'));
+    return true;
 }
 
 function formatSizeUnits($bytes)
